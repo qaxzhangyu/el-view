@@ -1,6 +1,6 @@
 <template>
   <div>
-    <webview id="foo" src="http://www.baidu.com" class="web-view"></webview>
+    <webview id="foo" src="https://www.baidu.com" class="web-view"></webview>
   </div>
   <!-- <div id="wrapper">
     <img id="logo" src="~@/assets/logo.png" alt="electron-vue">
@@ -34,7 +34,6 @@
 
 <script>
   import SystemInformation from './LandingPage/SystemInformation'
-
   export default {
     name: 'landing-page',
     components: {
@@ -50,7 +49,7 @@
       webview.addEventListener('new-window', (e) => {
         const protocol = require('url').parse(e.url).protocol
         if (protocol === 'http:' || protocol === 'https:') {
-          window.open(e.url)
+          window.open(e.url,'_blank','nodeIntegration=no')
         }
       });
 
