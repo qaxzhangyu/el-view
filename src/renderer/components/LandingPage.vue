@@ -1,6 +1,6 @@
 <template>
   <div>
-    <webview id="foo" src="http://www.baidu.com" style="web-view"></webview>
+    <webview id="foo" src="http://www.baidu.com" class="web-view"></webview>
   </div>
   <!-- <div id="wrapper">
     <img id="logo" src="~@/assets/logo.png" alt="electron-vue">

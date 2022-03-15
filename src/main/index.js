@@ -1,6 +1,7 @@
 import {
   app,
-  BrowserWindow
+  BrowserWindow,
+  Menu
 } from 'electron'
 import '../renderer/store'
 
@@ -28,9 +29,12 @@ function createWindow() {
     webPreferences: {
       nodeIntegration: true,
       webviewTag:true,
-    }
+    },
+    show:false
   })
-
+  mainWindow.maximize();
+  mainWindow.show();
+  Menu.setApplicationMenu(null);
   mainWindow.loadURL(winURL)
 
   mainWindow.on('closed', () => {
